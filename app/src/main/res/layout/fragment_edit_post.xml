@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Activity.EditPostFragment">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/publishedBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="contentVideoEt" />
+
+    <ImageView
+        android:id="@+id/avatarV"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/cancelIv"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_mode_edit_outline_24" />
+
+    <EditText
+        android:id="@+id/contentEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:gravity="start|top"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/publishedBarrier"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/saveIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/save_avatar" />
+
+
+
+
+    <ImageView
+        android:id="@+id/cancelIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cancel_avatar" />
+
+
+    <TextView
+        android:id="@+id/cancelTextTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/PostAuthor"
+        app:layout_constraintEnd_toStartOf="@+id/saveIv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/avatarV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/editedTextTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Редактировать"
+        android:textColor="#2196F3"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/cancelTextTv"
+        app:layout_constraintStart_toEndOf="@+id/avatarV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/contentVideoEt"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        android:inputType="textMultiLine"
+        android:maxHeight="200dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/contentEt"
+        app:layout_constraintStart_toStartOf="@+id/contentEt"
+        app:layout_constraintTop_toBottomOf="@+id/avatarV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
